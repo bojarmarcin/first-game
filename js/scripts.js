@@ -110,6 +110,17 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
 }
+setGamePoints();
+
+function countPoints() {
+  if (player.score == 10) {
+    alert('You win this game!');
+  }
+  else if (computer.score == 10) {
+    alert('Unfortunately you lost the game! Try again!')
+  }
+}
+countPoints();
 
 newGameBtn.addEventListener('click', newGame);
 
