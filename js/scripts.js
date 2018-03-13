@@ -44,6 +44,21 @@ function setGameElements() {
 }
 setGameElements();
 
+function setGamePoints() {
+    playerPointsElem.innerHTML = player.score;
+    computerPointsElem.innerHTML = computer.score;
+    countPoints();
+}
+
+function countPoints() {
+  if (player.score == 10) {
+    alert('You win this game!');
+  }
+  else if (computer.score == 10) {
+    alert('Unfortunately you lost the game! Try again!')
+  }
+}
+
 function newGame() {
   player.name = prompt('Please enter your name', 'imię gracza');
   if (player.name) {
@@ -106,20 +121,6 @@ function playerPick(playerPick) {
     checkRoundWinner(playerPick, computerPick);
 }
 
-function setGamePoints() {
-    playerPointsElem.innerHTML = player.score;
-    computerPointsElem.innerHTML = computer.score;
-    countPoints();
-}
-
-function countPoints() {
-  if (player.score == 10) {
-    alert('You win this game!');
-  }
-  else if (computer.score == 10) {
-    alert('Unfortunately you lost the game! Try again!')
-  }
-}
 
 newGameBtn.addEventListener('click', newGame);
 
