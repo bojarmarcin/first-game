@@ -109,8 +109,8 @@ function playerPick(playerPick) {
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+    countPoints();
 }
-setGamePoints();
 
 function countPoints() {
   if (player.score == 10) {
@@ -120,7 +120,6 @@ function countPoints() {
     alert('Unfortunately you lost the game! Try again!')
   }
 }
-countPoints();
 
 newGameBtn.addEventListener('click', newGame);
 
