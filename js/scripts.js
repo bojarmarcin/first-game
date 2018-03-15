@@ -51,18 +51,15 @@ function setGamePoints() {
 }
 
 function countPoints() {
-  var isPlayerWin = player.score == 0;
-  var isComputerWin = computer.score == 0;
-
-  if (isPlayerWin || isComputerWin) {
+  if (player.score == 10) {
+    alert('You win this game!');
     gameState = 'ended';
     setGameElements();
   }
-  if (isPlayerWin) {
-    alert('You win this game!');
-  }
-  else if (isComputerWin) {
+  else if (computer.score == 10) {
     alert('Unfortunately you lost the game! Try again!');
+    gameState = 'ended';
+    setGameElements();
   }
 }
 
