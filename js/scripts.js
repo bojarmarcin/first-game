@@ -53,11 +53,11 @@ function setGamePoints() {
 function countPoints() {
   if (player.score == 10) {
     alert('You win this game!');
-    gameState = 'notStarted';
+    gameState = 'ended';
   }
   else if (computer.score == 10) {
     alert('Unfortunately you lost the game! Try again!');
-    gameState = 'notStarted';
+    gameState = 'ended';
   }
 }
 
