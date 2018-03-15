@@ -53,11 +53,9 @@ function setGamePoints() {
 function countPoints() {
   if (player.score == 10) {
     alert('You win this game!');
-    newGame();
   }
   else if (computer.score == 10) {
     alert('Unfortunately you lost the game! Try again!');
-    newGame();
   }
 }
 
