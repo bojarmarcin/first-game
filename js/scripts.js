@@ -54,13 +54,13 @@ function countPoints() {
   if (player.score == 10) {
     alert('You won the game! Try again!');
     player.score = computer.score = 0;
-    gameState = 'started';
+    gameState = 'ended';
     setGameElements();
   }
   else if (computer.score == 10) {
     alert('Unfortunately you lost the game! Try again!');
     player.score = computer.score = 0;
-    gameState = 'started';
+    gameState = 'ended';
     setGameElements();
   }
 }
